@@ -9,7 +9,7 @@ const News = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-            'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=efccb86fb1864231adee426846191b80'
+          'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=efccb86fb1864231adee426846191b80'
         );
 
         if (!response.ok) {
@@ -36,11 +36,10 @@ const News = () => {
           <li key={index}>
             <h3>{article.title}</h3>
             <p>{article.description}</p>
-            <img src={article.urlToImage} />
+            <img src={article.urlToImage} alt="article get removed" />
             <Link to={`/news/${index}`}>
-           
               <h2 style={{ color: "royalblue" }}>
-                 More-About:- {article.source.name}
+                More-About:- {article.source.name}
               </h2>
             </Link>
           </li>

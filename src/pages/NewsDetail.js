@@ -18,7 +18,7 @@ const NewsDetail = ({ articles }) => {
       </h2>
       <h2>{article.title}</h2>
       <p>{article.content}</p>
-      <img src={article.urlToImage} />
+      <img src={article.urlToImage} alt="article get removed"/>
       <a href={article.url} target="_blank" rel="noopener noreferrer">
         <h2 style={{ color: "royalblue" }}>
           More-About:-  {article.source.name}
