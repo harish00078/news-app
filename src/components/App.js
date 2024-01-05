@@ -1,4 +1,4 @@
-// src/App.js
+
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import News from '../pages/News';
@@ -33,11 +33,12 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Routes>
-            <Route path="/news/:index" element={  <NewsDetail articles={news} />}/>
-            
-         
-            <Route path="/" element={<News />}/>
-       
+          
+            <Route path="/" element={  <News news={news} />}>
+            </Route>
+            <Route path="/news/:index" element={ <NewsDetail articles={news} />}>
+             
+            </Route>
           </Routes>
         </header>
       </div>
