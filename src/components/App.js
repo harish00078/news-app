@@ -21,7 +21,7 @@ function App() {
         const data = await response.json();
         setNews(data.articles);
       } catch (error) {
-        console.error('Error fetching news:', error.message);
+        console.error('Error fetching news:', error);
       }
     };
 
