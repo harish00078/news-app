@@ -1,0 +1,50 @@
+/* Business.css */
+
+/* Styles for the business container */
+.business-container {
+  margin-top: 2rem;
+}
+
+/* Styles for the business title */
+.business-title {
+  color: #333;
+}
+
+/* Styles for the news list */
+.business-news-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styles for each news item in business */
+.business-news-item {
+  background-color: #ffeeba;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+/* Styles for the business news item title */
+.business-news-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the business news item description */
+.business-news-description {
+  color: #8f5c2c;
+}
+
+/* Styles for the "Read more" link in business */
+.business-read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.business-read-more-link:hover {
+  text-decoration: underline;
+}

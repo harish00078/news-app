@@ -1,0 +1,29 @@
+/* Details.css */
+
+/* Styles for the details container */
+.details-container {
+  text-align: left;
+  padding: 2rem;
+}
+
+/* Styles for the details title */
+.details-title {
+  color: #333;
+}
+
+/* Styles for paragraphs in the details */
+.details-paragraph {
+  color: #666;
+}
+
+/* Styles for the "Read more" link */
+.read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}

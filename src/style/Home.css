@@ -1,0 +1,58 @@
+/* Home.css */
+
+/* Styles for the home container */
+.home-container {
+  margin-top: 2rem;
+}
+
+/* Styles for the home title */
+.home-title {
+  color: #333;
+}
+
+/* Styles for the news list in home */
+.home-news-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Styles for each news item in home */
+.home-news-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+/* Styles for the home news item title */
+.home-news-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the home news item description */
+.home-news-description {
+  color: #666;
+}
+
+/* Hover effect for home news items */
+.home-news-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles for the "Read more" link in home */
+.home-read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.home-read-more-link:hover {
+  text-decoration: underline;
+}

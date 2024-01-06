@@ -1,0 +1,58 @@
+/* Technology.css */
+
+/* Styles for the technology container */
+.technology-container {
+  margin-top: 2rem;
+}
+
+/* Styles for the technology title */
+.technology-title {
+  color: #333;
+}
+
+/* Styles for the news list in technology */
+.technology-news-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* Styles for each news item in technology */
+.technology-news-item {
+  background-color: #d1ecf1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+/* Styles for the technology news item title */
+.technology-news-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the technology news item description */
+.technology-news-description {
+  color: #198754;
+}
+
+/* Hover effect for technology news items */
+.technology-news-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles for the "Read more" link in technology */
+.technology-read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.technology-read-more-link:hover {
+  text-decoration: underline;
+}

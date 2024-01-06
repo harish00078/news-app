@@ -1,24 +1,39 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import News from '../pages/News';
-import DetailsNews from '../pages/NewsDetail';
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import Home from "./Home";
+import Business from "./Business";
+import Technology from "./Technology";
+import '../style/App.css'; // Import the CSS file
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <h1>React News App</h1>
-        </header>
-        <main>
-          <Routes>
-            <Route path="/" exact element={<News/>} />
-            <Route path="/news/:index" element={<DetailsNews/>} />
-          </Routes>
-        </main>
+      <div className="container">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/business">Business</Link>
+            </li>
+            <li>
+              <Link to="/technology">Technology</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/business" element={<Business />} />
+          <Route path="/technology" element={<Technology />} />
+        
+        </Routes>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
+
