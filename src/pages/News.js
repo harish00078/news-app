@@ -1,8 +1,32 @@
+// src/News.js
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+// import './News.css';
 
-import { Link } from "react-router-dom";
-import "../style/News.css";
+const News = () => {
+  const [news, setNews] = useState([]);
 
-const News = ({ news }) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          'https://newsapi.org/v2/everything?domains=wsj.com&apiKey=efccb86fb1864231adee426846191b80'
+        );
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch news');
+        }
+
+        const data = await response.json();
+        setNews(data.articles);
+      } catch (error) {
+        console.error('Error fetching news:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="container">
       <h2>Latest News about Tesla</h2>
@@ -11,12 +35,7 @@ const News = ({ news }) => {
           <li key={index}>
             <h3>{article.title}</h3>
             <p>{article.description}</p>
-            <img src={article.urlToImage} alt="article get removed" />
-            <Link to={`/news/${index}`}>
-              <h2 style={{ color: "royalblue" }}>
-                More-About:- {article.source.name}
-              </h2>
-            </Link>
+            <Link to={`/news/${index}`}>Read more</Link>
           </li>
         ))}
       </ul>
