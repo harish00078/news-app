@@ -13,6 +13,7 @@ const NewsCategory = ({ category }) => {
           `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=efccb86fb1864231adee426846191b80`
         );
         setNews(response.data.articles);
+        console.log(response.data.articles);
       } catch (error) {
         console.error("Error fetching news:", error);
       }
